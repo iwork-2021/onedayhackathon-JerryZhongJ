@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "86944FA5-88D3-426C-BAEA-2633FF800837": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "snacks.mlmodel",
+            "path": "com.apple.CoreML/snacks.mlmodel"
+        },
+        "93D8F2AA-1F8B-4EC1-858F-136245EED214": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        },
+        "F52727F2-7DBF-442B-A13D-E9AB803AEFBE": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        }
+    },
+    "rootModelIdentifier": "86944FA5-88D3-426C-BAEA-2633FF800837"
+}
