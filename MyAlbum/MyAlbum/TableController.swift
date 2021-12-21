@@ -17,14 +17,6 @@ class TableController: UITableViewController {
         tagGroups.append(TagGroup(name: "Vegtables", include: ["carrot"]))
         tagGroups.append(TagGroup(name: "Snacks", include: ["cake", "candy", "cookie", "doughnut", "hot dog", "ice cream", "juice", "popcorn", "pretzel", "salad", "waffle"]))
         
-        tagGroups[0].tags.append(Tag(name: "apple"))
-        tagGroups[0].tags[0].photoList.append(UIImage())
-        
-        tagGroups[1].tags.append(Tag(name: "carrot"))
-        tagGroups[1].tags[0].photoList.append(UIImage())
-        
-        tagGroups[2].tags.append(Tag(name: "cake"))
-        tagGroups[2].tags[0].photoList.append(UIImage())
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
