@@ -123,6 +123,39 @@ class TableController: UITableViewController {
         newTag.photoList.append(image)
         tagGroup.tags.append(newTag)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowPhotos"{
+            let cell = sender as! UITableViewCell
+            guard let indexPath = tableView.indexPath(for: cell) else{
+                print("Segue is triggered by an inexisting cell?")
+                return
+            }
+            let section = indexPath.section
+            let row = indexPath.row
+            let photosController = segue.destination as! PhotosController
+            switch(section){
+            case 0 ..< tagGroups.count:
+                guard row < tagGroups[section].tags.count else{
+                    print("row \(row) in section \(section) out of bound")
+                    return
+                }
+                photosController.title = tagGroups[section].tags[row].name
+                photosController.photos = tagGroups[section].tags[row].photoList
+            case tagGroups.count:
+                guard row < otherGroup.tags.count else{
+                    print("row \(row) in section \(section) out of bound")
+                    return
+                }
+                photosController.title = otherGroup.tags[row].name
+                photosController.photos = otherGroup.tags[row].photoList
+            default:
+                print("section \(section) out of bound")
+                
+            }
+            
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -155,16 +188,6 @@ class TableController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     */
 

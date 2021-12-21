@@ -16,6 +16,9 @@
 		7CD6972227717DDB00FF8EEC /* Snacks.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6972127717DDB00FF8EEC /* Snacks.mlpackage */; };
 		7CD697242771860800FF8EEC /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD697232771860800FF8EEC /* TableController.swift */; };
 		7CD697262771865C00FF8EEC /* TagGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD697252771865C00FF8EEC /* TagGroup.swift */; };
+		7CD6972A2771B54F00FF8EEC /* PhotosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD697292771B54F00FF8EEC /* PhotosController.swift */; };
+		7CD6972E2771BAA900FF8EEC /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6972D2771BAA900FF8EEC /* PhotoCell.swift */; };
+		7CD697302771C8B500FF8EEC /* DisplayPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6972F2771C8B500FF8EEC /* DisplayPhotoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		7CD6972127717DDB00FF8EEC /* Snacks.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = Snacks.mlpackage; path = ../../Snacks.mlpackage; sourceTree = "<group>"; };
 		7CD697232771860800FF8EEC /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		7CD697252771865C00FF8EEC /* TagGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagGroup.swift; sourceTree = "<group>"; };
+		7CD697292771B54F00FF8EEC /* PhotosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosController.swift; sourceTree = "<group>"; };
+		7CD6972D2771BAA900FF8EEC /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		7CD6972F2771C8B500FF8EEC /* DisplayPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPhotoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,9 @@
 				7CD6970F2771738D00FF8EEC /* AddPhotoController.swift */,
 				7CD6972127717DDB00FF8EEC /* Snacks.mlpackage */,
 				7CD697112771738D00FF8EEC /* Main.storyboard */,
+				7CD697292771B54F00FF8EEC /* PhotosController.swift */,
+				7CD6972F2771C8B500FF8EEC /* DisplayPhotoController.swift */,
+				7CD6972D2771BAA900FF8EEC /* PhotoCell.swift */,
 				7CD697232771860800FF8EEC /* TableController.swift */,
 				7CD697252771865C00FF8EEC /* TagGroup.swift */,
 				7CD697142771738E00FF8EEC /* Assets.xcassets */,
@@ -148,10 +157,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CD6972227717DDB00FF8EEC /* Snacks.mlpackage in Sources */,
+				7CD697302771C8B500FF8EEC /* DisplayPhotoController.swift in Sources */,
 				7CD697102771738D00FF8EEC /* AddPhotoController.swift in Sources */,
 				7CD6970C2771738D00FF8EEC /* AppDelegate.swift in Sources */,
 				7CD697262771865C00FF8EEC /* TagGroup.swift in Sources */,
+				7CD6972E2771BAA900FF8EEC /* PhotoCell.swift in Sources */,
 				7CD697242771860800FF8EEC /* TableController.swift in Sources */,
+				7CD6972A2771B54F00FF8EEC /* PhotosController.swift in Sources */,
 				7CD6970E2771738D00FF8EEC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
