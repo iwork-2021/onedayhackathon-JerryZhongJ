@@ -18,8 +18,25 @@ class AddPhotoController: UIViewController {
     @IBOutlet weak var resultsConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     var firstTime = true
-
+    var image: UIImage?{
+        get{
+            return imageView.image
+        }
+        set{
+            imageView.image = newValue
+        }
+    }
+    var tag: String?{
+        get{
+            return resultsLabel.text
+        }
+        set{
+            resultsLabel.text = newValue
+        }
+    }
+    
     lazy var classificationRequest: VNCoreMLRequest = {
       do{
           let classifier = try Snacks(configuration: MLModelConfiguration())
@@ -38,10 +55,11 @@ class AddPhotoController: UIViewController {
     }()
     
     override func viewDidLoad() {
-      super.viewDidLoad()
-      cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
-      resultsView.alpha = 0
-      resultsLabel.text = "choose or take a photo"
+        super.viewDidLoad()
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        resultsView.alpha = 0
+        resultsLabel.text = "choose or take a photo"
+        saveButton.isEnabled = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -108,7 +126,7 @@ class AddPhotoController: UIViewController {
       func processObservations(for request: VNRequest, error: Error?) {
           if let results = request.results as? [VNClassificationObservation] {
               if results.isEmpty {
-                  self.resultsLabel.text = "Nothing found"
+                  self.tag = "others"
               } else {
                   for result in results{
                       print("\(result.identifier) \(result.confidence)")
@@ -117,9 +135,9 @@ class AddPhotoController: UIViewController {
                   let confidence = results[0].confidence
                   
                   if(confidence >= 0.6){
-                      resultsLabel.text = id
+                      self.tag = id
                   }else{
-                      resultsLabel.text = "Not sure"
+                      self.tag = "others"
                   }
   //                 self.confidenceLabel.text = String(format: "%.1f%%", confidence * 100)
                   print(id)
@@ -136,12 +154,12 @@ class AddPhotoController: UIViewController {
 
   extension AddPhotoController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-      picker.dismiss(animated: true)
+        picker.dismiss(animated: true)
 
-      let image = info[.originalImage] as! UIImage
-      imageView.image = image
-
-      classify(image: image)
+        let image = info[.originalImage] as! UIImage
+        self.image = image
+        saveButton.isEnabled = true
+        classify(image: image)
     }
   }
 

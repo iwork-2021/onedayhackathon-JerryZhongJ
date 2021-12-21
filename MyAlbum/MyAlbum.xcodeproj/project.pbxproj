@@ -15,7 +15,7 @@
 		7CD697182771738E00FF8EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD697162771738E00FF8EEC /* LaunchScreen.storyboard */; };
 		7CD6972227717DDB00FF8EEC /* Snacks.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6972127717DDB00FF8EEC /* Snacks.mlpackage */; };
 		7CD697242771860800FF8EEC /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD697232771860800FF8EEC /* TableController.swift */; };
-		7CD697262771865C00FF8EEC /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD697252771865C00FF8EEC /* Group.swift */; };
+		7CD697262771865C00FF8EEC /* TagGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD697252771865C00FF8EEC /* TagGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		7CD697192771738E00FF8EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CD6972127717DDB00FF8EEC /* Snacks.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = Snacks.mlpackage; path = ../../Snacks.mlpackage; sourceTree = "<group>"; };
 		7CD697232771860800FF8EEC /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
-		7CD697252771865C00FF8EEC /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		7CD697252771865C00FF8EEC /* TagGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				7CD6972127717DDB00FF8EEC /* Snacks.mlpackage */,
 				7CD697112771738D00FF8EEC /* Main.storyboard */,
 				7CD697232771860800FF8EEC /* TableController.swift */,
-				7CD697252771865C00FF8EEC /* Group.swift */,
+				7CD697252771865C00FF8EEC /* TagGroup.swift */,
 				7CD697142771738E00FF8EEC /* Assets.xcassets */,
 				7CD697162771738E00FF8EEC /* LaunchScreen.storyboard */,
 				7CD697192771738E00FF8EEC /* Info.plist */,
@@ -150,7 +150,7 @@
 				7CD6972227717DDB00FF8EEC /* Snacks.mlpackage in Sources */,
 				7CD697102771738D00FF8EEC /* AddPhotoController.swift in Sources */,
 				7CD6970C2771738D00FF8EEC /* AppDelegate.swift in Sources */,
-				7CD697262771865C00FF8EEC /* Group.swift in Sources */,
+				7CD697262771865C00FF8EEC /* TagGroup.swift in Sources */,
 				7CD697242771860800FF8EEC /* TableController.swift in Sources */,
 				7CD6970E2771738D00FF8EEC /* SceneDelegate.swift in Sources */,
 			);
